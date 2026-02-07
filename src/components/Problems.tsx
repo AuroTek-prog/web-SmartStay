@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react';
-import { AlertCircle, MessagesSquare, TrendingDown, Search, AlertTriangle } from 'lucide-react';
+import { AlertCircle, MessagesSquare, TrendingDown, Search, AlertTriangle, Shield } from 'lucide-react';
 import { useRef } from 'react';
 
 const problems = [
@@ -27,6 +27,11 @@ const problems = [
     icon: AlertTriangle,
     title: 'Gestión reactiva',
     description: 'Siempre apagando fuegos en lugar de anticipar problemas'
+  },
+  {
+    icon: Shield,
+    title: 'Riesgos de seguridad',
+    description: 'Compartir información de acceso temporal supone riesgos de seguridad mientras dure la reserva'
   }
 ];
 
@@ -86,7 +91,7 @@ export function Problems() {
                 transition: { duration: 0.3 }
               }}
               style={{ transformStyle: "preserve-3d" }}
-              className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl hover:shadow-gray-500/20 transition-all duration-300 border border-gray-200 hover:border-gray-300 transform hover:-translate-y-1"
             >
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                 <problem.icon className="w-6 h-6 text-red-600" />

@@ -86,11 +86,11 @@ export function FinalCTA() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <motion.button 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all flex items-center justify-center gap-2 font-semibold text-lg group"
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all flex items-center justify-center gap-2 font-semibold text-lg group"
                 whileHover={{ 
                   scale: 1.05,
                   y: -5,
-                  boxShadow: "0 20px 60px rgba(0, 0, 0, 0.3)"
+                  boxShadow: "0 20px 60px rgba(37, 99, 235, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -129,7 +129,7 @@ export function FinalCTA() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src="business meeting handshake professional"
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80"
                 alt="Contacta con SmartStay"
                 className="w-full h-auto"
               />

@@ -28,6 +28,11 @@ export function Navigation() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
+            <img 
+              src="https://raw.githubusercontent.com/AuroTek-prog/smartstay-storage/refs/heads/main/images/icono%201.jpg" 
+              alt="SmartStay Logo" 
+              className="w-8 h-8 mr-3 rounded-lg"
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               SmartStay
             </span>

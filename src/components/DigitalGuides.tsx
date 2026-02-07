@@ -75,7 +75,7 @@ export function DigitalGuides() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <ImageWithFallback
-                  src="smartphone travel guide app interface"
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80"
                   alt="Guías digitales SmartStay"
                   className="w-full h-auto"
                 />

@@ -69,11 +69,11 @@ export function Hero() {
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 transforma
               </span>{' '}
-              la gestión de apartamentos turísticos
+              la gestión de apartamentos turísticos y potencia los negocios locales
             </h1>
 
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Mejora la experiencia de tus huéspedes, impulsa negocios locales y controla tu alojamiento en tiempo real.
+              Gestiona accesos inteligentes en tus alojamientos y potencia los negocios locales conectando huéspedes con comercios cercanos. Tecnología IoT para experiencias inolvidables.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -112,7 +112,7 @@ export function Hero() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src="modern luxury apartment building technology"
+                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80"
                 alt="SmartStay Platform"
                 className="w-full h-auto"
               />
