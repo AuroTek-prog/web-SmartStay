@@ -129,10 +129,10 @@ export function WiFiNetwork() {
                 viewport={{ once: true }}
                 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
               >
-                Estructura de redes con{' '}
-                <span className="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">
-                  puntos de acceso WiFi
-                </span>
+                Estructura de{' '}
+                <span className="text-blue-700 font-bold">redes</span>
+                {' '}con puntos de acceso{' '}
+                <span className="text-blue-700 font-bold">WiFi</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -163,8 +163,8 @@ export function WiFiNetwork() {
                   viewport={{ once: true }}
                   className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-300 border border-gray-100 hover:border-indigo-200 transform hover:-translate-y-1"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                    <benefit.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 flex items-center justify-center mb-4">
+                    <benefit.icon className="w-6 h-6 text-violet-500" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
                     {benefit.title}
@@ -183,7 +183,7 @@ export function WiFiNetwork() {
               transition={{ duration: 0.6, delay: 1.2 }}
               viewport={{ once: true }}
             >
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Consultar proyecto
               </button>
             </motion.div>

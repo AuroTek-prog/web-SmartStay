@@ -80,7 +80,7 @@ export function DomoticsControl() {
                 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
               >
                 Domótica y control{' '}
-                <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                <span className="text-blue-700 font-bold">
                   inteligente
                 </span>
               </motion.h2>

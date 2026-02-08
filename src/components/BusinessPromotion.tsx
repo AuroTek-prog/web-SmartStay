@@ -44,21 +44,21 @@ export function BusinessPromotion() {
   const scale = useTransform(imageScrollProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
 
   return (
-    <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-pink-50 to-purple-50 relative overflow-hidden">
+    <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 relative overflow-hidden">
       {/* Floating particles */}
       <motion.div
         style={{
           x: useTransform(scrollYProgress, [0, 1], [-100, 100]),
           y: useTransform(scrollYProgress, [0, 1], [-50, 50]),
         }}
-        className="absolute top-20 left-10 w-20 h-20 bg-pink-200 rounded-full opacity-20"
+        className="absolute top-20 left-10 w-20 h-20 bg-slate-100 rounded-full opacity-10"
       />
       <motion.div
         style={{
           x: useTransform(scrollYProgress, [0, 1], [100, -100]),
           y: useTransform(scrollYProgress, [0, 1], [50, -50]),
         }}
-        className="absolute bottom-20 right-10 w-32 h-32 bg-purple-200 rounded-full opacity-20"
+        className="absolute bottom-20 right-10 w-32 h-32 bg-slate-100 rounded-full opacity-10"
       />
 
       <div className="max-w-7xl mx-auto">
@@ -75,12 +75,12 @@ export function BusinessPromotion() {
           >
             <div className="relative">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80"
+                src="https://raw.githubusercontent.com/AuroTek-prog/smartstay-storage/refs/heads/main/images/Hospitality.jpg"
                 alt="Impulso a comercios"
-                className="w-full h-96 object-cover rounded-3xl shadow-2xl"
+                className="w-full h-96 object-contain rounded-3xl shadow-2xl"
                 fallbackSrc="/api/placeholder/600/400"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-pink-600/20 to-purple-600/20 rounded-3xl"></div>
+              <div className="absolute inset-0 bg-slate-100/20 rounded-3xl"></div>
 
               {/* Floating elements */}
               <motion.div
@@ -94,7 +94,7 @@ export function BusinessPromotion() {
                 }}
                 className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg"
               >
-                <TrendingUp className="w-6 h-6 text-pink-600" />
+                <TrendingUp className="w-6 h-6 text-indigo-500" />
               </motion.div>
 
               <motion.div
@@ -108,7 +108,7 @@ export function BusinessPromotion() {
                 }}
                 className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg"
               >
-                <Users className="w-6 h-6 text-purple-600" />
+                <Users className="w-6 h-6 text-indigo-500" />
               </motion.div>
             </div>
           </motion.div>
@@ -127,19 +127,16 @@ export function BusinessPromotion() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+                className="text-4xl md:text-5xl font-bold text-slate-900 mb-6"
               >
-                Impulso a{' '}
-                <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-                  comercios
-                </span>
+                Impulso a comercios
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="text-xl text-gray-600 leading-relaxed"
+                className="text-xl text-slate-500 leading-relaxed"
               >
                 Promociona tu comercio en nuestra red de alojamientos turísticos.
                 Accede a campañas de marketing sectorizadas y aumenta tus ventas.
@@ -157,21 +154,47 @@ export function BusinessPromotion() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1, type: "spring", stiffness: 200 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-pink-500/20 transition-all duration-300 border border-gray-100 hover:border-pink-200 transform hover:-translate-y-1"
+                  whileHover={{ 
+                    scale: 1.05,
+                    y: -5,
+                    rotateX: 5,
+                    z: 50,
+                    transition: { duration: 0.3 }
+                  }}
+                  style={{ transformStyle: "preserve-3d" }}
+                  className="bg-white p-6 rounded-2xl shadow-[0_10px_40px_-10px_rgba(99,102,241,0.15)] hover:shadow-[0_15px_50px_-10px_rgba(99,102,241,0.25)] border border-slate-100 hover:-translate-y-1 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
-                    <benefit.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <motion.div 
+                    initial={{ scale: 0, rotate: -180 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.4, delay: 0.9 + index * 0.1, type: "spring", stiffness: 300 }}
+                    viewport={{ once: true }}
+                    className="w-12 h-12 flex items-center justify-center mb-4"
+                  >
+                    <benefit.icon className="w-6 h-6 text-violet-500" />
+                  </motion.div>
+                  <motion.h3 
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: 1.0 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="text-lg font-semibold text-slate-900 mb-2"
+                  >
                     {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
+                  </motion.h3>
+                  <motion.p 
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: 1.1 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="text-slate-500 text-sm"
+                  >
                     {benefit.description}
-                  </p>
+                  </motion.p>
                 </motion.div>
               ))}
             </motion.div>
@@ -183,9 +206,18 @@ export function BusinessPromotion() {
               transition={{ duration: 0.6, delay: 1.2 }}
               viewport={{ once: true }}
             >
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <motion.button 
+                whileHover={{ 
+                  scale: 1.05,
+                  y: -3,
+                  boxShadow: "0 20px 40px rgba(37, 99, 235, 0.3)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-indigo-500/30 hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
                 Empezar promoción
-              </button>
+              </motion.button>
             </motion.div>
           </motion.div>
         </div>

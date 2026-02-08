@@ -5,23 +5,23 @@ import { useRef } from 'react';
 const features = [
   {
     icon: Rocket,
-    title: 'Evolución constante',
-    description: 'Actualizaciones y nuevas funcionalidades que se adaptan al sector'
+    title: 'Expansión Multi-Fabricante',
+    description: 'Arquitectura modular lista para integrar nuevos fabricantes IoT sin refactorizar'
   },
   {
     icon: TrendingUp,
-    title: 'Crece contigo',
-    description: 'Desde un apartamento hasta grandes carteras de alojamientos'
+    title: 'Escalabilidad SaaS Global',
+    description: 'Desde MVP hasta enterprise: broker MQTT único escala a miles de dispositivos'
   },
   {
     icon: Layers,
-    title: 'Preparada para más',
-    description: 'Infraestructura lista para integrar futuras innovaciones'
+    title: 'Monetización Evolutiva',
+    description: 'Planes escalables con límites inteligentes que impulsan upgrades naturales'
   },
   {
     icon: Compass,
-    title: 'Visión a largo plazo',
-    description: 'Acompañamos el crecimiento y transformación de tu negocio'
+    title: 'Liderazgo en IoT Hospitality',
+    description: 'Posicionamiento premium en mercado €50B+ con CAGR 25%+ en smart buildings'
   }
 ];
 
@@ -64,10 +64,10 @@ export function Innovation() {
             </span>
           </div>
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Una plataforma que evoluciona contigo
+            Arquitectura Futura para IoT Hospitality
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            SmartStay no es solo una herramienta para hoy, es tu aliado para el futuro del turismo
+            SmartStay está construida para liderar el mercado IoT en turismo inteligente con escalabilidad global
           </p>
         </motion.div>
 

@@ -80,7 +80,7 @@ export function ParkingAccess() {
                 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
               >
                 Control de accesos de{' '}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="text-indigo-700 font-bold">
                   parking
                 </span>
               </motion.h2>
@@ -133,7 +133,7 @@ export function ParkingAccess() {
               transition={{ duration: 0.6, delay: 1.2 }}
               viewport={{ once: true }}
             >
-              <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Solicitar presupuesto
               </button>
             </motion.div>

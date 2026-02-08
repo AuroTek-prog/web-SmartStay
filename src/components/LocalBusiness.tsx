@@ -129,25 +129,25 @@ export function LocalBusiness() {
                 scale,
                 transformStyle: "preserve-3d"
               }}
-              className="relative"
+              className="relative p-6"
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80"
+                  src="https://raw.githubusercontent.com/AuroTek-prog/smartstay-storage/refs/heads/main/images/Hospitality.jpg"
                   alt="Negocios locales"
                   className="w-full h-auto"
                 />
               </div>
               
               {/* Floating cards */}
-              <motion.div
+              <motion.div 
                 animate={{ 
                   y: [0, -10, 0],
                   rotateX: [0, 10, 0]
                 }}
                 transition={{ duration: 3, repeat: Infinity }}
                 whileHover={{ scale: 1.1, z: 100 }}
-                className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl p-4"
+                className="absolute bottom-4 left-4 bg-white rounded-xl shadow-xl p-4"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 <div className="flex items-center gap-3">

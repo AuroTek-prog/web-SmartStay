@@ -82,7 +82,7 @@ export function IoTControl() {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3840&q=80"
+                  src="https://raw.githubusercontent.com/AuroTek-prog/smartstay-storage/refs/heads/main/images/young-woman-using-home-technology.jpg"
                   alt="Control inteligente IoT"
                   className="w-full h-auto"
                 />

@@ -5,23 +5,23 @@ import { useRef } from 'react';
 const features = [
   {
     icon: BookOpen,
-    title: 'Guías digitales inteligentes',
-    description: 'Información clara, actualizada y accesible para tus huéspedes desde cualquier dispositivo'
+    title: 'Integración Multi-Fabricante',
+    description: 'Soporte nativo para Shelly, Milesight y Raixer. Arquitectura MQTT + REST para máxima compatibilidad y escalabilidad'
   },
   {
     icon: Store,
-    title: 'Canal directo con negocios locales',
-    description: 'Conecta a tus huéspedes con comercios relevantes y genera nuevas oportunidades'
+    title: 'Monetización SaaS + IoT',
+    description: 'Suscripciones recurrentes con Stripe + upsells en hardware. Modelo híbrido para revenue streams diversificado'
   },
   {
     icon: Activity,
-    title: 'Monitorización inteligente',
-    description: 'Control en tiempo real de ocupación, agua y electricidad sin complicaciones'
+    title: 'Automatización y Seguridad',
+    description: 'Onboarding automático vía MQTT, control seguro sin exposición de credenciales, cumplimiento GDPR'
   },
   {
     icon: BarChart3,
-    title: 'Datos para decidir mejor',
-    description: 'Información clara y accionable para optimizar tu gestión día a día'
+    title: 'Tiempo Real y Escalabilidad',
+    description: 'WebSockets para actualizaciones en vivo, broker MQTT único para miles de dispositivos, arquitectura híbrida'
   }
 ];
 
@@ -58,29 +58,47 @@ export function Solution() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-4 py-2 bg-blue-100 rounded-full mb-4">
-            <span className="text-sm font-medium text-blue-700">Solución integral</span>
-          </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            SmartStay: Todo en una sola plataforma
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Una solución completa que unifica experiencia, control y oportunidades comerciales
-          </p>
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2, type: "spring", stiffness: 200 }}
+            className="inline-block px-4 py-2 bg-blue-100 rounded-full mb-4"
+          >
+            <span className="text-sm font-medium text-blue-700">Solución SaaS IoT</span>
+          </motion.div>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-4xl font-bold text-gray-900 mb-4"
+          >
+            SmartStay: Plataforma Premium para Hospitality IoT
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-xl text-gray-600 max-w-3xl mx-auto"
+          >
+            Arquitectura escalable con broker MQTT único, integración multi-fabricante y monetización recurrente
+          </motion.p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30, y: 20 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.7, delay: index * 0.15, ease: "easeOut" }}
               whileHover={{ 
-                scale: 1.05,
+                scale: 1.03,
                 rotateX: 5,
-                rotateY: index % 2 === 0 ? -5 : 5,
+                rotateY: index % 2 === 0 ? -3 : 3,
                 z: 50,
                 transition: { duration: 0.3 }
               }}
@@ -88,14 +106,33 @@ export function Solution() {
               className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 hover:shadow-lg transition-all"
             >
               <motion.div 
+                initial={{ scale: 0, rotate: -180 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.15 + 0.3, type: "spring", stiffness: 200 }}
                 className="w-14 h-14 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mb-6"
                 whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
               >
                 <feature.icon className="w-7 h-7 text-white" />
               </motion.div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-700">{feature.description}</p>
+              <motion.h3 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.15 + 0.4 }}
+                className="text-xl font-semibold text-gray-900 mb-3"
+              >
+                {feature.title}
+              </motion.h3>
+              <motion.p 
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.15 + 0.5 }}
+                className="text-gray-700"
+              >
+                {feature.description}
+              </motion.p>
             </motion.div>
           ))}
         </div>
@@ -108,10 +145,10 @@ export function Solution() {
           className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-center text-white"
         >
           <h3 className="text-3xl font-bold mb-4">
-            Todo lo que necesitas para gestionar mejor, desde un solo lugar
+            Ventaja Competitiva en el Mercado IoT para Buildings Inteligentes
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Sin complejidad técnica. Solo resultados claros y valor inmediato para tu negocio.
+            Integración preconfigurada acelera el time-to-market. Monetiza desde el lanzamiento con suscripciones recurrentes.
           </p>
           <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-xl transition-all font-medium text-lg">
             Ver cómo funciona

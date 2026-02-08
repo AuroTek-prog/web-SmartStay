@@ -80,7 +80,7 @@ export function StarlinkInstallation() {
                 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
               >
                 Instalación de antenas{' '}
-                <span className="bg-gradient-to-r from-teal-600 to-emerald-600 bg-clip-text text-transparent">
+                <span className="text-blue-700 font-bold">
                   Starlink
                 </span>
               </motion.h2>

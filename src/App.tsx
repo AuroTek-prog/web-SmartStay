@@ -4,7 +4,6 @@ import { Solution } from './components/Solution';
 import { DigitalGuides } from './components/DigitalGuides';
 import { LocalBusiness } from './components/LocalBusiness';
 import { AccessControl } from './components/AccessControl';
-import { BusinessPromotion } from './components/BusinessPromotion';
 import { IoTControl } from './components/IoTControl';
 import { ParkingAccess } from './components/ParkingAccess';
 import { StarlinkInstallation } from './components/StarlinkInstallation';
@@ -17,7 +16,7 @@ import { FinalCTA } from './components/FinalCTA';
 import { Navigation } from './components/Navigation';
 import { ScrollProgress } from './components/ScrollProgress';
 import { FloatingElements } from './components/FloatingElements';
-import { InteractiveParticles } from './components/InteractiveParticles';
+import { BrandHero } from './components/BrandHero';
 
 export default function App() {
   return (
@@ -25,7 +24,7 @@ export default function App() {
       <ScrollProgress />
       <Navigation />
       <FloatingElements />
-      <InteractiveParticles />
+      <BrandHero />
       <Hero />
       <Problems />
       <Solution />
@@ -33,7 +32,6 @@ export default function App() {
       <LocalBusiness />
       {/* Servicios principales */}
       <AccessControl />
-      <BusinessPromotion />
       {/* Servicios IoT y adicionales */}
       <IoTControl />
       <ParkingAccess />

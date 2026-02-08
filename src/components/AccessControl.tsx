@@ -80,7 +80,7 @@ export function AccessControl() {
                 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
               >
                 Control de accesos para{' '}
-                <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                <span className="text-blue-700 font-bold">
                   alojamientos turísticos
                 </span>
               </motion.h2>
@@ -107,21 +107,47 @@ export function AccessControl() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                  initial={{ opacity: 0, scale: 0.8, rotateY: -15 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.15, type: "spring", stiffness: 200 }}
                   viewport={{ once: true }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    y: -5,
+                    rotateX: 5,
+                    z: 50,
+                    transition: { duration: 0.3 }
+                  }}
+                  style={{ transformStyle: "preserve-3d" }}
                   className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300 border border-gray-100 hover:border-green-200 transform hover:-translate-y-1"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4">
+                  <motion.div 
+                    initial={{ scale: 0, rotate: -180 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    transition={{ duration: 0.4, delay: 0.9 + index * 0.15, type: "spring", stiffness: 300 }}
+                    viewport={{ once: true }}
+                    className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4"
+                  >
                     <benefit.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  </motion.div>
+                  <motion.h3 
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 1.0 + index * 0.15 }}
+                    viewport={{ once: true }}
+                    className="text-lg font-semibold text-gray-900 mb-2"
+                  >
                     {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
+                  </motion.h3>
+                  <motion.p 
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: 1.1 + index * 0.15 }}
+                    viewport={{ once: true }}
+                    className="text-gray-600 text-sm"
+                  >
                     {benefit.description}
-                  </p>
+                  </motion.p>
                 </motion.div>
               ))}
             </motion.div>

@@ -4,37 +4,37 @@ import { useRef } from 'react';
 
 const comparison = [
   {
-    feature: 'Guías digitales actualizables',
+    feature: 'Integración multi-fabricante (Shelly, Milesight, Raixer)',
     others: false,
     smartstay: true
   },
   {
-    feature: 'Canal comercial integrado',
+    feature: 'Suscripciones recurrentes con Stripe',
     others: false,
     smartstay: true
   },
   {
-    feature: 'Monitorización IoT en tiempo real',
+    feature: 'Arquitectura MQTT + REST escalable',
     others: false,
     smartstay: true
   },
   {
-    feature: 'Control de ocupación y consumos',
+    feature: 'Onboarding automático de dispositivos',
     others: false,
     smartstay: true
   },
   {
-    feature: 'Datos para optimizar gestión',
+    feature: 'Control seguro sin exposición de credenciales',
     others: false,
     smartstay: true
   },
   {
-    feature: 'Plataforma todo-en-uno',
+    feature: 'Cumplimiento GDPR y normativas IoT',
     others: false,
     smartstay: true
   },
   {
-    feature: 'Escalable con tu negocio',
+    feature: 'Monetización híbrida SaaS + hardware',
     others: false,
     smartstay: true
   }
@@ -74,10 +74,10 @@ export function Differentiation() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Por qué SmartStay es diferente
+            Ventaja Competitiva en IoT para Hospitality
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Mientras otros ofrecen piezas sueltas, SmartStay es la solución completa
+            SmartStay no es solo una herramienta más, es la plataforma SaaS premium que integra todo el ecosistema IoT
           </p>
         </motion.div>
 
@@ -156,10 +156,10 @@ export function Differentiation() {
           {/* Footer */}
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-8 text-center">
             <p className="text-2xl font-bold text-white mb-2">
-              Una sola plataforma. Más valor. Más control.
+              Arquitectura Superior. Monetización Recurrente. Mercado Premium.
             </p>
             <p className="text-blue-100 text-lg">
-              Todo integrado, sin necesidad de múltiples herramientas
+              La única plataforma SaaS completa para IoT en hospitality con integración multi-fabricante
             </p>
           </div>
         </motion.div>

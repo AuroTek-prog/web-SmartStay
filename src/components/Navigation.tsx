@@ -62,6 +62,12 @@ export function Navigation() {
               Beneficios
             </motion.a>
             <motion.button 
+              className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
+              whileHover={{ y: -2 }}
+            >
+              Sign up
+            </motion.button>
+            <motion.button 
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
@@ -92,6 +98,9 @@ export function Navigation() {
             <a href="#beneficios" className="block text-gray-700 hover:text-blue-600 transition-colors">
               Beneficios
             </a>
+            <button className="block text-blue-600 hover:text-blue-700 font-medium transition-colors">
+              Sign up
+            </button>
             <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
               Solicitar demo
             </button>
