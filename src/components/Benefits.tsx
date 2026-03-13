@@ -8,8 +8,8 @@ const gestorBenefits = [
     title: 'Control total de tu alojamiento',
     color: 'blue',
     benefits: [
-      'Gestiona accesos, consumos y guÃ­as desde un solo panel',
-      'Check-in automÃ¡tico 24/7 sin intervenciÃ³n manual',
+      'Gestiona accesos, consumos y guías desde un solo panel',
+      'Check-in automático 24/7 sin intervención manual',
       'Alertas en tiempo real: fugas, accesos no autorizados, sobretensiones',
       'Reduce incidencias operativas hasta un 40%'
     ]
@@ -19,21 +19,21 @@ const gestorBenefits = [
     title: 'Ahorro y eficiencia garantizados',
     color: 'green',
     benefits: [
-      'Monitoreo de consumo de agua y energÃ­a en tiempo real',
-      'DetecciÃ³n automÃ¡tica de fugas y anomalÃ­as',
-      'OptimizaciÃ³n de tarifas elÃ©ctricas con datos histÃ³ricos',
+      'Monitoreo de consumo de agua y energía en tiempo real',
+      'Detección automática de fugas y anomalías',
+      'Optimización de tarifas eléctricas con datos históricos',
       'Informes mensuales de ahorro para tu negocio'
     ]
   },
   {
     icon: Star,
-    title: 'Mejor experiencia para el huÃ©sped',
+    title: 'Mejor experiencia para el huésped',
     color: 'purple',
     benefits: [
-      'GuÃ­a turÃ­stica digital personalizada para cada alojamiento',
-      'Acceso sin contacto: sin llaves ni tarjetas fÃ­sicas',
-      'InformaciÃ³n local siempre actualizada en el mÃ³vil',
-      'Menos consultas, mÃ¡s satisfacciÃ³n: â­ 4.9 de media'
+      'Guía turística digital personalizada para cada alojamiento',
+      'Acceso sin contacto: sin llaves ni tarjetas físicas',
+      'Información local siempre actualizada en el móvil',
+      'Menos consultas, más satisfacción: ⭐ 4.9 de media'
     ]
   }
 ];
@@ -44,19 +44,19 @@ const clientTypes = [
     title: 'Gestores de Alojamientos',
     color: 'blue',
     benefits: [
-      'Propietarios de apartamentos turÃ­sticos y vacacionales',
+      'Propietarios de apartamentos turísticos y vacacionales',
       'Hoteles, hostales y complejos rurales',
-      'Control centralizado de mÃºltiples propiedades',
-      'Panel de analÃ­tica para tomar mejores decisiones'
+      'Control centralizado de múltiples propiedades',
+      'Panel de analítica para tomar mejores decisiones'
     ]
   },
   {
     icon: Heart,
-    title: 'HuÃ©spedes y Viajeros',
+    title: 'Huéspedes y Viajeros',
     color: 'indigo',
     benefits: [
-      'Acceso a la guÃ­a turÃ­stica digital sin apps ni registro',
-      'Check-in y check-out automÃ¡tico desde el mÃ³vil',
+      'Acceso a la guía turística digital sin apps ni registro',
+      'Check-in y check-out automático desde el móvil',
       'Recomendaciones locales actualizadas al instante',
       'Experiencia premium desde la llegada hasta la salida'
     ]
@@ -66,10 +66,10 @@ const clientTypes = [
     title: 'Comercios y Negocios Locales',
     color: 'purple',
     benefits: [
-      'Visibilidad directa en la red de alojamientos turÃ­sticos',
-      'ConexiÃ³n con turistas que buscan servicios locales',
-      'CampaÃ±as de promociÃ³n segmentadas por zona',
-      'EstadÃ­sticas reales de impacto y alcance'
+      'Visibilidad directa en la red de alojamientos turísticos',
+      'Conexión con turistas que buscan servicios locales',
+      'Campañas de promoción segmentadas por zona',
+      'Estadísticas reales de impacto y alcance'
     ]
   }
 ];
@@ -81,20 +81,20 @@ const productHighlights = [
     color: 'green',
     benefits: [
       'Accesos certificados y trazables en todo momento',
-      'CÃ³digos temporales Ãºnicos para cada huÃ©sped',
+      'Códigos temporales únicos para cada huésped',
       'Compatible con GDPR y normativas de privacidad',
-      'Soporte tÃ©cnico especializado disponible'
+      'Soporte técnico especializado disponible'
     ]
   },
   {
     icon: Users,
-    title: 'FÃ¡cil para ti, mejor para todos',
+    title: 'Fácil para ti, mejor para todos',
     color: 'blue',
     benefits: [
-      'Plataforma intuitiva sin conocimientos tÃ©cnicos',
-      'Alta en menos de 24 horas con acompaÃ±amiento incluido',
-      'Actualizaciones automÃ¡ticas sin perder configuraciones',
-      'Soporte en espaÃ±ol con equipo humano real'
+      'Plataforma intuitiva sin conocimientos técnicos',
+      'Alta en menos de 24 horas con acompañamiento incluido',
+      'Actualizaciones automáticas sin perder configuraciones',
+      'Soporte en español con equipo humano real'
     ]
   },
   {
@@ -102,9 +102,9 @@ const productHighlights = [
     title: 'Crece con tu negocio',
     color: 'purple',
     benefits: [
-      'Planes flexibles desde 4.99â‚¬/mes por activo',
-      'AÃ±ade servicios segÃºn las necesidades de tu negocio',
-      'IntegraciÃ³n con tus herramientas de gestiÃ³n actuales',
+      'Planes flexibles desde 4.99€/mes por activo',
+      'Añade servicios según las necesidades de tu negocio',
+      'Integración con tus herramientas de gestión actuales',
       'Escala desde 1 alojamiento hasta cientos de propiedades'
     ]
   }
@@ -216,7 +216,7 @@ export function Benefits() {
             Lo que SmartStay hace por ti
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            TecnologÃ­a que simplifica la gestiÃ³n, reduce costes y eleva la experiencia de tus huÃ©spedes
+            Tecnología que simplifica la gestión, reduce costes y eleva la experiencia de tus huéspedes
           </p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8 mb-20">
@@ -232,10 +232,10 @@ export function Benefits() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Â¿Para quiÃ©n es SmartStay?
+            ¿Para quién es SmartStay?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            DiseÃ±ado para todos los actores del ecosistema turÃ­stico: gestores, viajeros y comercios locales
+            Diseñado para todos los actores del ecosistema turístico: gestores, viajeros y comercios locales
           </p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8 mb-20">
@@ -273,7 +273,7 @@ export function Benefits() {
             Empieza hoy, sin compromiso
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Alta rÃ¡pida, soporte en espaÃ±ol y planes desde 4.99â‚¬/mes. Contacta con nuestro equipo y te preparamos una demo personalizada.
+            Alta rápida, soporte en español y planes desde 4.99€/mes. Contacta con nuestro equipo y te preparamos una demo personalizada.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

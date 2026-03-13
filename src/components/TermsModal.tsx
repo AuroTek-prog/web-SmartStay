@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { motion } from 'motion/react';
-import { X } from 'lucide-react';
+import { X, Check } from 'lucide-react';
 
 interface TermsModalProps {
   isOpen: boolean;
@@ -32,8 +33,8 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
 
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+  return createPortal(
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4" style={{ isolation: 'isolate' }}>
       {/* Backdrop */}
       <motion.div
         key="backdrop"
@@ -304,15 +305,26 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
         </div>
 
         {/* Footer */}
-        <div className="px-8 py-5 border-t border-gray-100 bg-gray-50 rounded-b-2xl shrink-0 flex justify-end">
-          <button
-            onClick={onClose}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-2.5 rounded-lg font-medium hover:shadow-lg transition-all"
-          >
-            Cerrar
-          </button>
+        <div className="px-8 py-5 border-t border-gray-100 bg-gray-50 rounded-b-2xl shrink-0 flex items-center justify-between gap-4">
+          <p className="text-xs text-gray-400 hidden sm:block">Al hacer clic en "Acepto" confirmas haber leído y aceptado estos términos.</p>
+          <div className="flex gap-3 ml-auto">
+            <button
+              onClick={onClose}
+              className="border border-gray-300 text-gray-600 px-6 py-2.5 rounded-lg font-medium hover:bg-gray-100 transition-all"
+            >
+              Salir
+            </button>
+            <button
+              onClick={onClose}
+              className="flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-2.5 rounded-lg font-medium hover:shadow-lg transition-all"
+            >
+              <Check className="w-4 h-4" />
+              Acepto
+            </button>
+          </div>
         </div>
       </motion.div>
-    </div>
+    </div>,
+    document.body
   );
 }

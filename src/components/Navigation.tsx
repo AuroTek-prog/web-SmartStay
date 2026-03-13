@@ -62,7 +62,7 @@ export function Navigation() {
               Beneficios
             </motion.a>
             <motion.a 
-              href="https://app.smartstaycloud.com"
+              href="https://smartstaycloud.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-700 font-medium transition-colors"
@@ -111,7 +111,7 @@ export function Navigation() {
             <a href="#beneficios" className="block text-gray-700 hover:text-blue-600 transition-colors">
               Beneficios
             </a>
-            <a href="https://app.smartstaycloud.com" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-700 font-medium transition-colors">
+            <a href="https://smartstaycloud.com/" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-700 font-medium transition-colors">
               Acceder
             </a>
             <a href="https://smartstaycloud.com/" target="_blank" rel="noopener noreferrer" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">

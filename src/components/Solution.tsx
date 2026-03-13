@@ -151,7 +151,7 @@ export function Solution() {
             Crea en minutos una guía personalizada para tu alojamiento: recomendaciones locales, normas, check-in digital y mucho más. Sin apps, sin complicaciones.
           </p>
           <a
-            href="https://app.smartstaycloud.com"
+            href="https://smartstaycloud.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg hover:shadow-xl transition-all font-semibold text-lg"
