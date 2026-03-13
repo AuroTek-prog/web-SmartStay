@@ -119,19 +119,24 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
                 </thead>
                 <tbody className="divide-y divide-gray-100">
                   <tr>
-                    <td className="px-4 py-2 font-medium">Básico</td>
-                    <td className="px-4 py-2">Desde 4,99 €</td>
-                    <td className="px-4 py-2">Guía digital + panel básico</td>
+                    <td className="px-4 py-2 font-medium">Starter</td>
+                    <td className="px-4 py-2">4,99 €/mes/activo</td>
+                    <td className="px-4 py-2">Guía digital + acceso básico. Sin dispositivo IoT.</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 font-medium">Estándar</td>
-                    <td className="px-4 py-2">Desde 14,99 €</td>
-                    <td className="px-4 py-2">Guía + comercio local + acceso</td>
+                    <td className="px-4 py-2 font-medium">Standard</td>
+                    <td className="px-4 py-2">7,99 €/mes/activo</td>
+                    <td className="px-4 py-2">Guía + comercio local + dispositivo IoT incluido.</td>
                   </tr>
                   <tr>
-                    <td className="px-4 py-2 font-medium">Premium</td>
-                    <td className="px-4 py-2">Desde 29,99 €</td>
-                    <td className="px-4 py-2">Plataforma completa + IoT</td>
+                    <td className="px-4 py-2 font-medium">Pro</td>
+                    <td className="px-4 py-2">14,99 €/mes/activo</td>
+                    <td className="px-4 py-2">Plataforma completa: IoT + aseo + soporte técnico prioritario.</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-2 font-medium">Pro Anual</td>
+                    <td className="px-4 py-2">161 €/año/activo</td>
+                    <td className="px-4 py-2">Plan Pro con descuento anual.</td>
                   </tr>
                   <tr>
                     <td className="px-4 py-2 font-medium">Enterprise</td>
