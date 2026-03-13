@@ -2,8 +2,11 @@ import { Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 
+const NAV_SECTIONS = ['solucion', 'funcionalidades', 'beneficios'] as const;
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const { scrollY } = useScroll();
   const backgroundColor = useTransform(
     scrollY,
@@ -15,6 +18,21 @@ export function Navigation() {
     [0, 100],
     ["0 0 0 rgba(0, 0, 0, 0)", "0 4px 20px rgba(0, 0, 0, 0.1)"]
   );
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    NAV_SECTIONS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(id); },
+        { rootMargin: '-30% 0px -60% 0px', threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    });
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
 
   return (
     <motion.nav 
@@ -42,21 +60,21 @@ export function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <motion.a 
               href="#solucion" 
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors font-medium relative pb-0.5 ${activeSection === 'solucion' ? 'text-blue-600 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-blue-600 after:rounded-full' : 'text-gray-700 hover:text-blue-600'}`}
               whileHover={{ y: -2 }}
             >
               Solución
             </motion.a>
             <motion.a 
               href="#funcionalidades" 
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors font-medium relative pb-0.5 ${activeSection === 'funcionalidades' ? 'text-blue-600 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-blue-600 after:rounded-full' : 'text-gray-700 hover:text-blue-600'}`}
               whileHover={{ y: -2 }}
             >
               Funcionalidades
             </motion.a>
             <motion.a 
               href="#beneficios" 
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors font-medium relative pb-0.5 ${activeSection === 'beneficios' ? 'text-blue-600 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-blue-600 after:rounded-full' : 'text-gray-700 hover:text-blue-600'}`}
               whileHover={{ y: -2 }}
             >
               Beneficios
@@ -102,13 +120,13 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-4">
-            <a href="#solucion" className="block text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#solucion" onClick={() => setIsOpen(false)} className={`block transition-colors font-medium ${activeSection === 'solucion' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}>
               Solución
             </a>
-            <a href="#funcionalidades" className="block text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#funcionalidades" onClick={() => setIsOpen(false)} className={`block transition-colors font-medium ${activeSection === 'funcionalidades' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}>
               Funcionalidades
             </a>
-            <a href="#beneficios" className="block text-gray-700 hover:text-blue-600 transition-colors">
+            <a href="#beneficios" onClick={() => setIsOpen(false)} className={`block transition-colors font-medium ${activeSection === 'beneficios' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}>
               Beneficios
             </a>
             <a href="https://smartstaycloud.com/" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-700 font-medium transition-colors">

@@ -15,11 +15,9 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
       scrollContainerRef.current?.scrollTo({ top: 0 });
-    } else {
-      document.body.style.overflow = 'unset';
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -34,14 +32,25 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
   if (!isOpen) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4" style={{ isolation: 'isolate' }}>
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        zIndex: 9999,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '1rem',
+      }}
+    >
       {/* Backdrop */}
       <motion.div
         key="backdrop"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        style={{ position: 'absolute', inset: 0 }}
+        className="bg-black/70 backdrop-blur-sm"
         onClick={onClose}
       />
 
@@ -52,7 +61,8 @@ export function TermsModal({ isOpen, onClose }: TermsModalProps) {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className="relative w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl flex flex-col z-10"
+        style={{ position: 'relative', zIndex: 1 }}
+        className="w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl flex flex-col"
       >
         {/* Header */}
         <div className="flex items-center justify-between px-8 py-5 border-b border-gray-100 shrink-0">
