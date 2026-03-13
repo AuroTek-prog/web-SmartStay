@@ -5,23 +5,23 @@ import { useRef } from 'react';
 const features = [
   {
     icon: BookOpen,
-    title: 'Integración Multi-Fabricante',
-    description: 'Soporte nativo para Shelly, Milesight y Raixer. Arquitectura MQTT + REST para máxima compatibilidad y escalabilidad'
+    title: 'Guía Turística Digital',
+    description: 'Tu alojamiento con una guía digital personalizada: recomendaciones locales, normas de la casa, check-in y toda la información que tu huésped necesita, siempre actualizada y accesible desde el móvil'
   },
   {
     icon: Store,
-    title: 'Monetización SaaS + IoT',
-    description: 'Suscripciones recurrentes con Stripe + upsells en hardware. Modelo híbrido para revenue streams diversificado'
+    title: 'Impulso a Comercios Locales',
+    description: 'Conecta tu alojamiento con restaurantes, tiendas y actividades locales. Los huéspedes descubren los mejores sitios y los comercios ganan visibilidad real y clientes cualificados'
   },
   {
     icon: Activity,
-    title: 'Automatización y Seguridad',
-    description: 'Onboarding automático vía MQTT, control seguro sin exposición de credenciales, cumplimiento GDPR'
+    title: 'Control Inteligente de Accesos',
+    description: 'Check-in automático 24/7 con códigos temporales únicos. Sin llaves, sin tarjetas: tus huéspedes acceden de forma segura y tú tienes el registro completo en tiempo real'
   },
   {
     icon: BarChart3,
-    title: 'Tiempo Real y Escalabilidad',
-    description: 'WebSockets para actualizaciones en vivo, broker MQTT único para miles de dispositivos, arquitectura híbrida'
+    title: 'Monitoreo IoT de Consumos',
+    description: 'Controla el consumo de agua y energía en tiempo real. Detecta anomalías al instante, recibe alertas y reduce costes operativos con datos claros y accionables'
   }
 ];
 
@@ -65,7 +65,7 @@ export function Solution() {
             transition={{ duration: 0.5, delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-block px-4 py-2 bg-blue-100 rounded-full mb-4"
           >
-            <span className="text-sm font-medium text-blue-700">Solución SaaS IoT</span>
+            <span className="text-sm font-medium text-blue-700">Nuestros productos</span>
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ export function Solution() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-4xl font-bold text-gray-900 mb-4"
           >
-            SmartStay: Plataforma Premium para Hospitality IoT
+            Todo lo que necesita tu alojamiento, en una sola plataforma
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -83,7 +83,7 @@ export function Solution() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
-            Arquitectura escalable con broker MQTT único, integración multi-fabricante y monetización recurrente
+            Desde la guía turística digital hasta el control de accesos y el monitoreo inteligente: soluciones reales para gestores modernos
           </motion.p>
         </motion.div>
 
@@ -145,14 +145,19 @@ export function Solution() {
           className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-center text-white"
         >
           <h3 className="text-3xl font-bold mb-4">
-            Ventaja Competitiva en el Mercado IoT para Buildings Inteligentes
+            La guía turística digital: el producto estrella de SmartStay
           </h3>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Integración preconfigurada acelera el time-to-market. Monetiza desde el lanzamiento con suscripciones recurrentes.
+            Crea en minutos una guía personalizada para tu alojamiento: recomendaciones locales, normas, check-in digital y mucho más. Sin apps, sin complicaciones.
           </p>
-          <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-xl transition-all font-medium text-lg">
-            Ver cómo funciona
-          </button>
+          <a
+            href="https://app.smartstaycloud.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg hover:shadow-xl transition-all font-semibold text-lg"
+          >
+            Probar ahora gratis
+          </a>
         </motion.div>
       </div>
     </section>

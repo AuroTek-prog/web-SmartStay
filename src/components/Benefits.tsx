@@ -1,111 +1,111 @@
-import { motion, useScroll, useTransform } from 'motion/react';
-import { Building2, Heart, Store, TrendingUp, Users, Shield, Zap, DollarSign } from 'lucide-react';
+﻿import { motion, useScroll, useTransform } from 'motion/react';
+import { Building2, Heart, Store, TrendingUp, Users, Shield, Zap, Star } from 'lucide-react';
 import { useRef } from 'react';
 
-const businessModel = [
+const gestorBenefits = [
   {
-    icon: DollarSign,
-    title: 'Modelo SaaS con Suscripciones',
-    color: 'green',
-    benefits: [
-      'Suscripciones recurrentes integradas con Stripe',
-      'Planes escalables por usuario o local (básico, premium, enterprise)',
-      'Límites en dispositivos, sensores y acciones permitidas',
-      'Ingresos mensuales/anuales predecibles'
-    ]
-  },
-  {
-    icon: TrendingUp,
-    title: 'Monetización Híbrida',
+    icon: Building2,
+    title: 'Control total de tu alojamiento',
     color: 'blue',
     benefits: [
-      'Software SaaS + integración hardware IoT',
-      'Upsells en dispositivos Shelly, Milesight y Raixer',
-      'Soporte premium y servicios adicionales',
-      'Partnerships con fabricantes IoT'
+      'Gestiona accesos, consumos y guÃ­as desde un solo panel',
+      'Check-in automÃ¡tico 24/7 sin intervenciÃ³n manual',
+      'Alertas en tiempo real: fugas, accesos no autorizados, sobretensiones',
+      'Reduce incidencias operativas hasta un 40%'
     ]
   },
   {
     icon: Zap,
-    title: 'Arquitectura Escalable',
+    title: 'Ahorro y eficiencia garantizados',
+    color: 'green',
+    benefits: [
+      'Monitoreo de consumo de agua y energÃ­a en tiempo real',
+      'DetecciÃ³n automÃ¡tica de fugas y anomalÃ­as',
+      'OptimizaciÃ³n de tarifas elÃ©ctricas con datos histÃ³ricos',
+      'Informes mensuales de ahorro para tu negocio'
+    ]
+  },
+  {
+    icon: Star,
+    title: 'Mejor experiencia para el huÃ©sped',
     color: 'purple',
     benefits: [
-      'Broker MQTT único para transporte de datos',
-      'Backend centralizado para lógica de negocio',
-      'APIs REST/WebSocket para integraciones',
-      'Expansión a nuevos fabricantes sin cambios mayores'
+      'GuÃ­a turÃ­stica digital personalizada para cada alojamiento',
+      'Acceso sin contacto: sin llaves ni tarjetas fÃ­sicas',
+      'InformaciÃ³n local siempre actualizada en el mÃ³vil',
+      'Menos consultas, mÃ¡s satisfacciÃ³n: â­ 4.9 de media'
     ]
   }
 ];
 
-const targetAudience = [
+const clientTypes = [
   {
     icon: Building2,
-    title: 'Gestores de Propiedades',
+    title: 'Gestores de Alojamientos',
     color: 'blue',
     benefits: [
-      'Propietarios de apartamentos turísticos',
-      'Hoteles, hostales y smart buildings',
-      'Optimización de operaciones diarias',
-      'Control de accesos y monitoreo de consumos'
+      'Propietarios de apartamentos turÃ­sticos y vacacionales',
+      'Hoteles, hostales y complejos rurales',
+      'Control centralizado de mÃºltiples propiedades',
+      'Panel de analÃ­tica para tomar mejores decisiones'
     ]
   },
   {
     icon: Heart,
-    title: 'Huéspedes y Usuarios Finales',
+    title: 'HuÃ©spedes y Viajeros',
     color: 'indigo',
     benefits: [
-      'Acceso público simplificado',
-      'Control de puertas y métricas en tiempo real',
-      'Experiencia premium de check-in/check-out',
-      'Información clara y siempre disponible'
+      'Acceso a la guÃ­a turÃ­stica digital sin apps ni registro',
+      'Check-in y check-out automÃ¡tico desde el mÃ³vil',
+      'Recomendaciones locales actualizadas al instante',
+      'Experiencia premium desde la llegada hasta la salida'
     ]
   },
   {
     icon: Store,
-    title: 'Empresas de Hospitality',
+    title: 'Comercios y Negocios Locales',
     color: 'purple',
     benefits: [
-      'Plataformas de alquiler vacacional (Airbnb)',
-      'Desarrolladores de smart homes/buildings',
-      'Mercados europeos y emergentes',
-      'Crecimiento en IoT para turismo'
+      'Visibilidad directa en la red de alojamientos turÃ­sticos',
+      'ConexiÃ³n con turistas que buscan servicios locales',
+      'CampaÃ±as de promociÃ³n segmentadas por zona',
+      'EstadÃ­sticas reales de impacto y alcance'
     ]
   }
 ];
 
-const marketStrengths = [
+const productHighlights = [
   {
     icon: Shield,
-    title: 'Integración Multi-Fabricante',
+    title: 'Seguridad y tranquilidad',
     color: 'green',
     benefits: [
-      'Soporte nativo para Shelly, Milesight y Raixer',
-      'Reducción de costos de integración',
-      'Mayor compatibilidad vs competidores',
-      'Diferenciación técnica significativa'
+      'Accesos certificados y trazables en todo momento',
+      'CÃ³digos temporales Ãºnicos para cada huÃ©sped',
+      'Compatible con GDPR y normativas de privacidad',
+      'Soporte tÃ©cnico especializado disponible'
     ]
   },
   {
     icon: Users,
-    title: 'Automatización y Seguridad',
+    title: 'FÃ¡cil para ti, mejor para todos',
     color: 'blue',
     benefits: [
-      'Onboarding automático vía MQTT',
-      'Control seguro sin exposición de credenciales',
-      'Separación de responsabilidades (backend como "cerebro")',
-      'Cumplimiento GDPR y normativas IoT'
+      'Plataforma intuitiva sin conocimientos tÃ©cnicos',
+      'Alta en menos de 24 horas con acompaÃ±amiento incluido',
+      'Actualizaciones automÃ¡ticas sin perder configuraciones',
+      'Soporte en espaÃ±ol con equipo humano real'
     ]
   },
   {
     icon: TrendingUp,
-    title: 'Tiempo Real y Escalabilidad',
+    title: 'Crece con tu negocio',
     color: 'purple',
     benefits: [
-      'WebSockets para actualizaciones en vivo',
-      'Broker MQTT único para miles de dispositivos',
-      'Arquitectura híbrida MQTT + REST',
-      'Competencia con Home Assistant y hubs IoT comerciales'
+      'Planes flexibles desde 4.99â‚¬/mes por activo',
+      'AÃ±ade servicios segÃºn las necesidades de tu negocio',
+      'IntegraciÃ³n con tus herramientas de gestiÃ³n actuales',
+      'Escala desde 1 alojamiento hasta cientos de propiedades'
     ]
   }
 ];
@@ -144,6 +144,46 @@ export function Benefits() {
     offset: ["start end", "end start"]
   });
 
+  const renderCards = (items: typeof gestorBenefits) =>
+    items.map((item, index) => {
+      const colors = colorClasses[item.color as keyof typeof colorClasses];
+      return (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30, rotateX: -15 }}
+          whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+          whileHover={{ scale: 1.03, y: -8, transition: { duration: 0.3 } }}
+          className={`${colors.bg} rounded-2xl p-8 border ${colors.border}`}
+        >
+          <motion.div
+            initial={{ scale: 0, rotate: -180 }}
+            whileInView={{ scale: 1, rotate: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.15 + 0.3, type: "spring", stiffness: 200 }}
+            className={`w-14 h-14 ${colors.iconBg} rounded-xl flex items-center justify-center mb-6`}
+            whileHover={{ rotate: 360, scale: 1.1 }}
+          >
+            <item.icon className={`w-7 h-7 ${colors.iconText}`} />
+          </motion.div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">{item.title}</h3>
+          <ul className="space-y-3">
+            {item.benefits.map((benefit, idx) => (
+              <li key={idx} className="flex items-start gap-3">
+                <div className={`w-5 h-5 ${colors.iconBg} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                  <svg className={`w-3 h-3 ${colors.iconText}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <span className="text-gray-700">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      );
+    });
+
   return (
     <section id="beneficios" ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Animated background shapes */}
@@ -161,9 +201,10 @@ export function Benefits() {
         }}
         className="absolute bottom-1/4 right-0 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl"
       />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
-        {/* Business Model Section */}
+
+        {/* Section 1: What you get */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -172,94 +213,17 @@ export function Benefits() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Modelo de Negocio SmartStay
+            Lo que SmartStay hace por ti
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Plataforma SaaS para gestión inteligente de alojamientos turísticos con monetización híbrida y escalabilidad global
+            TecnologÃ­a que simplifica la gestiÃ³n, reduce costes y eleva la experiencia de tus huÃ©spedes
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {businessModel.map((item, index) => {
-            const colors = colorClasses[item.color as keyof typeof colorClasses];
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30, rotateX: -15 }}
-                whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
-                whileHover={{ 
-                  scale: 1.03,
-                  y: -8,
-                  rotateY: 3,
-                  z: 50,
-                  transition: { duration: 0.3, ease: "easeOut" }
-                }}
-                style={{ transformStyle: "preserve-3d" }}
-                className={`${colors.bg} rounded-2xl p-8 border ${colors.border}`}
-              >
-                <motion.div 
-                  initial={{ scale: 0, rotate: -180 }}
-                  whileInView={{ scale: 1, rotate: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.15 + 0.3, type: "spring", stiffness: 200 }}
-                  className={`w-14 h-14 ${colors.iconBg} rounded-xl flex items-center justify-center mb-6`}
-                  whileHover={{ 
-                    rotate: 360,
-                    scale: 1.1
-                  }}
-                >
-                  <item.icon className={`w-7 h-7 ${colors.iconText}`} />
-                </motion.div>
-                
-                <motion.h3 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.15 + 0.4 }}
-                  className="text-2xl font-bold text-gray-900 mb-6"
-                >
-                  {item.title}
-                </motion.h3>
-                
-                <motion.ul 
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.15 + 0.5 }}
-                  className="space-y-3"
-                >
-                  {item.benefits.map((benefit, idx) => (
-                    <motion.li 
-                      key={idx} 
-                      initial={{ opacity: 0, x: -15 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: index * 0.15 + 0.6 + idx * 0.1 }}
-                      className="flex items-start gap-3"
-                    >
-                      <motion.div 
-                        initial={{ scale: 0 }}
-                        whileInView={{ scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.15 + 0.7 + idx * 0.1, type: "spring", stiffness: 300 }}
-                        className={`w-5 h-5 ${colors.iconBg} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}
-                      >
-                        <svg className={`w-3 h-3 ${colors.iconText}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </motion.div>
-                      <span className="text-gray-700">{benefit}</span>
-                    </motion.li>
-                  ))}
-                </motion.ul>
-              </motion.div>
-            );
-          })}
+          {renderCards(gestorBenefits)}
         </div>
 
-        {/* Target Audience Section */}
+        {/* Section 2: Who is it for */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -268,64 +232,17 @@ export function Benefits() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            ¿A Quién Va Dedicado?
+            Â¿Para quiÃ©n es SmartStay?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            SmartStay está diseñado para el sector hospitality y empresas que buscan optimizar la gestión de propiedades inteligentes
+            DiseÃ±ado para todos los actores del ecosistema turÃ­stico: gestores, viajeros y comercios locales
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {targetAudience.map((user, index) => {
-            const colors = colorClasses[user.color as keyof typeof colorClasses];
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ 
-                  scale: 1.05,
-                  y: -10,
-                  rotateY: 5,
-                  z: 50,
-                  transition: { duration: 0.3 }
-                }}
-                style={{ transformStyle: "preserve-3d" }}
-                className={`${colors.bg} rounded-2xl p-8 border ${colors.border}`}
-              >
-                <motion.div 
-                  className={`w-14 h-14 ${colors.iconBg} rounded-xl flex items-center justify-center mb-6`}
-                  whileHover={{ 
-                    rotate: 360,
-                    scale: 1.2
-                  }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <user.icon className={`w-7 h-7 ${colors.iconText}`} />
-                </motion.div>
-                
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{user.title}</h3>
-                
-                <ul className="space-y-3">
-                  {user.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className={`w-5 h-5 ${colors.iconBg} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                        <svg className={`w-3 h-3 ${colors.iconText}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            );
-          })}
+          {renderCards(clientTypes)}
         </div>
 
-        {/* Market Strengths Section */}
+        {/* Section 3: Product highlights */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -334,95 +251,43 @@ export function Benefits() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Puntos Fuertes que Impactan sobre el Mercado
+            Sencillo, fiable y a tu medida
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Diferenciación técnica y ventajas competitivas en el mercado de IoT para hospitality
+            Seguridad, facilidad de uso y planes flexibles para todo tipo de alojamiento
           </p>
         </motion.div>
-
         <div className="grid md:grid-cols-3 gap-8">
-          {marketStrengths.map((strength, index) => {
-            const colors = colorClasses[strength.color as keyof typeof colorClasses];
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ 
-                  scale: 1.05,
-                  y: -10,
-                  rotateY: 5,
-                  z: 50,
-                  transition: { duration: 0.3 }
-                }}
-                style={{ transformStyle: "preserve-3d" }}
-                className={`${colors.bg} rounded-2xl p-8 border ${colors.border}`}
-              >
-                <motion.div 
-                  className={`w-14 h-14 ${colors.iconBg} rounded-xl flex items-center justify-center mb-6`}
-                  whileHover={{ 
-                    rotate: 360,
-                    scale: 1.2
-                  }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <strength.icon className={`w-7 h-7 ${colors.iconText}`} />
-                </motion.div>
-                
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{strength.title}</h3>
-                
-                <ul className="space-y-3">
-                  {strength.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className={`w-5 h-5 ${colors.iconBg} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                        <svg className={`w-3 h-3 ${colors.iconText}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            );
-          })}
+          {renderCards(productHighlights)}
         </div>
 
-        {/* Platform Advantages CTA */}
+        {/* CTA block */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-12 text-center"
+          className="mt-20 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-center"
         >
-          <h3 className="text-3xl font-bold mb-4 text-gray-100">
-            Ventajas para Crear la Plataforma Web
+          <h3 className="text-3xl font-bold mb-4 text-white">
+            Empieza hoy, sin compromiso
           </h3>
-          <p className="text-xl text-gray-200 mb-8 max-w-4xl mx-auto">
-            Reducción de tiempo y costos de desarrollo, escalabilidad técnica, ventaja competitiva y monetización inmediata. 
-            Arquitectura modular con MQTT + REST, integración preconfigurada y compliance incorporado.
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Alta rÃ¡pida, soporte en espaÃ±ol y planes desde 4.99â‚¬/mes. Contacta con nuestro equipo y te preparamos una demo personalizada.
           </p>
-          <div className="grid md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
-            <div className="bg-white/20 rounded-lg p-6">
-              <h4 className="font-semibold mb-2 text-gray-100">Desarrollo Acelerado</h4>
-              <p className="text-gray-200">Prototipado rápido con dispositivos IoT listos, enfocando esfuerzo en backend/frontend</p>
-            </div>
-            <div className="bg-white/20 rounded-lg p-6">
-              <h4 className="font-semibold mb-2 text-gray-100">Escalabilidad Global</h4>
-              <p className="text-gray-200">Arquitectura modular facilita agregar fabricantes sin refactorizar</p>
-            </div>
-            <div className="bg-white/20 rounded-lg p-6">
-              <h4 className="font-semibold mb-2 text-gray-100">Monetización Inmediata</h4>
-              <p className="text-gray-200">Planes por límites impulsan revenue recurrente desde el lanzamiento</p>
-            </div>
-            <div className="bg-white/20 rounded-lg p-6">
-              <h4 className="font-semibold mb-2 text-gray-100">Seguridad y Compliance</h4>
-              <p className="text-gray-200">Proxy backend evita exposiciones, facilitando certificaciones</p>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:sales@smartstaycloud.com"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:shadow-xl transition-all font-semibold text-lg"
+            >
+              Solicitar demo gratuita
+            </a>
+            <a
+              href="mailto:info@smartstaycloud.com"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
+            >
+              info@smartstaycloud.com
+            </a>
           </div>
         </motion.div>
       </div>

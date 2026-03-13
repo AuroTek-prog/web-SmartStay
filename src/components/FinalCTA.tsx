@@ -57,7 +57,7 @@ export function FinalCTA() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-4xl lg:text-5xl font-bold text-white mb-6"
             >
-              Únete a la Revolución IoT en Hospitality
+              ¿Listo para mejorar tu alojamiento?
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export function FinalCTA() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-xl text-blue-100 mb-8"
             >
-              Descubre la plataforma SaaS premium que integra Shelly, Milesight y Raixer para transformar tu negocio turístico con IoT inteligente.
+              Guía digital para huéspedes, control de accesos inteligente, monitoreo de consumos y visibilidad para los comercios de tu zona. Todo en uno, desde 4.99€/mes.
             </motion.p>
 
             <motion.div 
@@ -145,7 +145,8 @@ export function FinalCTA() {
               transition={{ duration: 0.6, delay: 1.1 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <motion.button 
+              <motion.a
+                href="mailto:sales@smartstaycloud.com"
                 whileHover={{ 
                   scale: 1.05,
                   y: -5,
@@ -153,18 +154,14 @@ export function FinalCTA() {
                 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all flex items-center justify-center gap-2 font-semibold text-lg group"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all flex items-center justify-center gap-2 font-semibold text-lg group"
               >
-                <motion.div
-                  whileHover={{ x: 2 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  <Calendar className="w-5 h-5" />
-                </motion.div>
-                Solicitar demo
+                <Calendar className="w-5 h-5" />
+                Solicitar demo gratuita
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-              <motion.button 
+              </motion.a>
+              <motion.a
+                href="mailto:info@smartstaycloud.com"
                 whileHover={{ 
                   scale: 1.02,
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -175,8 +172,8 @@ export function FinalCTA() {
                 className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2 font-semibold text-lg"
               >
                 <Mail className="w-5 h-5" />
-                Hablar con SmartStay
-              </motion.button>
+                info@smartstaycloud.com
+              </motion.a>
             </motion.div>
           </motion.div>
 
@@ -242,17 +239,17 @@ export function FinalCTA() {
             <div>
               <h4 className="text-white font-semibold mb-2">Producto</h4>
               <ul className="space-y-2 text-blue-200">
-                <li><a href="#" className="hover:text-white transition-colors">Funcionalidades</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Precios</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Casos de éxito</a></li>
+                <li><a href="#solucion" className="hover:text-white transition-colors">Solución</a></li>
+                <li><a href="#funcionalidades" className="hover:text-white transition-colors">Funcionalidades</a></li>
+                <li><a href="#beneficios" className="hover:text-white transition-colors">Beneficios</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-2">Empresa</h4>
+              <h4 className="text-white font-semibold mb-2">Contacto</h4>
               <ul className="space-y-2 text-blue-200">
-                <li><a href="#" className="hover:text-white transition-colors">Sobre nosotros</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contacto</a></li>
+                <li><a href="mailto:sales@smartstaycloud.com" className="hover:text-white transition-colors">sales@smartstaycloud.com</a></li>
+                <li><a href="mailto:support@smartstaycloud.com" className="hover:text-white transition-colors">support@smartstaycloud.com</a></li>
+                <li><a href="mailto:info@smartstaycloud.com" className="hover:text-white transition-colors">info@smartstaycloud.com</a></li>
               </ul>
             </div>
             <div>
@@ -267,7 +264,7 @@ export function FinalCTA() {
           
           <div className="text-blue-200">
             <p className="text-2xl font-bold mb-2 text-white">SmartStay</p>
-            <p>© 2026 SmartStay. Plataforma SaaS IoT para gestión inteligente de alojamientos turísticos.</p>
+            <p>© 2026 SmartStay. Tecnología para alojamientos turísticos — <a href="mailto:info@smartstaycloud.com" className="hover:text-white transition-colors">info@smartstaycloud.com</a></p>
           </div>
         </motion.div>
       </div>

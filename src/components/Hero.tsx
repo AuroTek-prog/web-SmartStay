@@ -11,12 +11,12 @@ export function Hero() {
   });
 
   const dynamicTexts = [
-    "mejoras significativas",
-    "tecnología IoT",
-    "una sola plataforma", 
-    "automatizaciones",
-    "expansión global",
-    "eficiencia operativa"
+    "guías digitales personalizadas",
+    "control de accesos inteligente",
+    "ahorro en consumos", 
+    "huéspedes más satisfechos",
+    "comercios locales conectados",
+    "gestión sin complicaciones"
   ];
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -99,8 +99,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
               className="text-xl text-gray-600 mb-8 leading-relaxed"
             >
-              Gestiona accesos inteligentes, monitorea consumos y potencia negocios locales. 
-              Integración multi-fabricante con Shelly, Milesight y Raixer. Suscripciones recurrentes con Stripe.
+              Guía turística digital para tus huéspedes, control de accesos sin llaves, monitoreo de consumos y visibilidad para los comercios de tu zona. Todo desde una sola plataforma.
             </motion.p>
 
             <motion.div 
@@ -159,9 +158,9 @@ export function Hero() {
                   transition={{ duration: 0.5, delay: 1, type: "spring", stiffness: 200 }}
                   className="text-2xl font-bold text-gray-900"
                 >
-                  500+
+                  Desde 4.99€
                 </motion.div>
-                <div>Alojamientos activos</div>
+                <div>por activo / mes</div>
               </motion.div>
               <motion.div 
                 whileHover={{ scale: 1.05 }}
@@ -174,9 +173,9 @@ export function Hero() {
                   transition={{ duration: 0.5, delay: 1.1, type: "spring", stiffness: 200 }}
                   className="text-2xl font-bold text-gray-900"
                 >
-                  €50B+
+                  ⭐ 4.9
                 </motion.div>
-                <div>Mercado IoT buildings</div>
+                <div>Valoración media</div>
               </motion.div>
               <motion.div 
                 whileHover={{ scale: 1.05 }}
@@ -189,9 +188,9 @@ export function Hero() {
                   transition={{ duration: 0.5, delay: 1.2, type: "spring", stiffness: 200 }}
                   className="text-2xl font-bold text-gray-900"
                 >
-                  25%+
+                  30%+
                 </motion.div>
-                <div>CAGR crecimiento</div>
+                <div>Menos consultas</div>
               </motion.div>
             </motion.div>
           </motion.div>
