@@ -71,6 +71,15 @@ export function Navigation() {
               Acceder
             </motion.a>
             <motion.a 
+              href="https://smartstaycloud.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              whileHover={{ y: -2 }}
+            >
+              Registrarse
+            </motion.a>
+            <motion.a 
               href="mailto:sales@smartstaycloud.com"
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
               whileHover={{ scale: 1.05, y: -2 }}
@@ -104,6 +113,9 @@ export function Navigation() {
             </a>
             <a href="https://app.smartstaycloud.com" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-700 font-medium transition-colors">
               Acceder
+            </a>
+            <a href="https://smartstaycloud.com/" target="_blank" rel="noopener noreferrer" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Registrarse
             </a>
             <a href="mailto:sales@smartstaycloud.com" className="block w-full text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
               Solicitar demo

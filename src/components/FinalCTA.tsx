@@ -3,7 +3,11 @@ import { ArrowRight, Mail, Calendar } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useRef } from 'react';
 
-export function FinalCTA() {
+interface FinalCTAProps {
+  onOpenTerms?: () => void;
+}
+
+export function FinalCTA({ onOpenTerms }: FinalCTAProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -255,9 +259,9 @@ export function FinalCTA() {
             <div>
               <h4 className="text-white font-semibold mb-2">Legal</h4>
               <ul className="space-y-2 text-blue-200">
-                <li><a href="#" className="hover:text-white transition-colors">Privacidad</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Términos</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Cookies</a></li>
+                <li><button onClick={onOpenTerms} className="hover:text-white transition-colors">Privacidad</button></li>
+                <li><button onClick={onOpenTerms} className="hover:text-white transition-colors">Términos</button></li>
+                <li><button onClick={onOpenTerms} className="hover:text-white transition-colors">Cookies</button></li>
               </ul>
             </div>
           </div>

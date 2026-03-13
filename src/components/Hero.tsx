@@ -108,7 +108,8 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <motion.button 
+              <motion.a
+                href="mailto:sales@smartstaycloud.com"
                 whileHover={{ 
                   scale: 1.05,
                   y: -2,
@@ -125,7 +126,7 @@ export function Hero() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </motion.div>
                 Solicitar demo
-              </motion.button>
+              </motion.a>
               <motion.button 
                 whileHover={{ 
                   scale: 1.02,

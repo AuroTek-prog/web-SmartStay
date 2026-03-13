@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Hero } from './components/Hero';
 import { Problems } from './components/Problems';
 import { Solution } from './components/Solution';
@@ -17,8 +18,12 @@ import { Navigation } from './components/Navigation';
 import { ScrollProgress } from './components/ScrollProgress';
 import { FloatingElements } from './components/FloatingElements';
 import { BrandHero } from './components/BrandHero';
+import { CookieBanner } from './components/CookieBanner';
+import { TermsModal } from './components/TermsModal';
 
 export default function App() {
+  const [showTerms, setShowTerms] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       <ScrollProgress />
@@ -41,7 +46,9 @@ export default function App() {
       <Benefits />
       <Differentiation />
       <Innovation />
-      <FinalCTA />
+      <FinalCTA onOpenTerms={() => setShowTerms(true)} />
+      <CookieBanner onOpenTerms={() => setShowTerms(true)} />
+      <TermsModal isOpen={showTerms} onClose={() => setShowTerms(false)} />
     </div>
   );
 }
