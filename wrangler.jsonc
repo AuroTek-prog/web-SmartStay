@@ -9,5 +9,5 @@
     "directory": "dist",
     "not_found_handling": "single-page-application"
   },
-  "custom_domains": ["www.smartstaycloud.com"]
+  "custom_domains": ["web.smartstaycloud.com"]
 }
