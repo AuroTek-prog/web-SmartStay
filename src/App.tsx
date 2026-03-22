@@ -20,6 +20,7 @@ import { FloatingElements } from './components/FloatingElements';
 import { BrandHero } from './components/BrandHero';
 import { CookieBanner } from './components/CookieBanner';
 import { TermsModal } from './components/TermsModal';
+import { VideoShowcase } from './components/VideoShowcase';
 
 export default function App() {
   const [showTerms, setShowTerms] = useState(false);
@@ -33,6 +34,7 @@ export default function App() {
       <Hero />
       <Problems />
       <Solution />
+      <VideoShowcase />
       <DigitalGuides />
       <LocalBusiness />
       {/* Servicios principales */}
