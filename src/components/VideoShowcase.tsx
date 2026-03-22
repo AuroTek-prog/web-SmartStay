@@ -3,8 +3,8 @@ import { Play } from 'lucide-react';
 
 export function VideoShowcase() {
   return (
-    <section id="video" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto relative z-10">
+    <section id="video" className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,15 +47,17 @@ export function VideoShowcase() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video"
+          className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video bg-black"
         >
           <iframe
-            src="https://www.youtube.com/embed/Z5Cdi0r3tGI"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Z5Cdi0r3tGI?rel=0"
             title="SmartStay - Descubre cómo funciona"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
-            className="w-full h-full absolute inset-0"
-            loading="lazy"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
           />
         </motion.div>
       </div>
