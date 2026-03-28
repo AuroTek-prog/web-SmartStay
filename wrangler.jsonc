@@ -1,7 +1,10 @@
-// Cloudflare Pages configuration
+// Cloudflare Workers + Assets configuration
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "smartstayweb",
   "compatibility_date": "2025-09-27",
-  "pages_build_output_dir": "dist"
+  "main": "src/worker.js",
+  "assets": {
+    "directory": "dist"
+  }
 }
