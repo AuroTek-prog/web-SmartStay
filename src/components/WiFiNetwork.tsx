@@ -26,7 +26,7 @@ const benefits = [
   }
 ];
 
-export function WiFiNetwork() {
+export function WiFiNetwork({ onOpenSalesForm }: { onOpenSalesForm?: (origen: string) => void }) {
   const ref = useRef(null);
   const imageRef = useRef(null);
 
@@ -183,7 +183,7 @@ export function WiFiNetwork() {
               transition={{ duration: 0.6, delay: 1.2 }}
               viewport={{ once: true }}
             >
-              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button onClick={() => onOpenSalesForm?.('Consultar proyecto — WiFi')} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 Consultar proyecto
               </button>
             </motion.div>

@@ -3,7 +3,7 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { useRef, useState, useEffect } from 'react';
 
-export function Hero() {
+export function Hero({ onOpenSalesForm }: { onOpenSalesForm?: (origen: string) => void }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -108,8 +108,8 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <motion.a
-                href="mailto:sales@smartstaycloud.com"
+              <motion.button
+                onClick={() => onOpenSalesForm?.('Solicitar demo — Hero')}
                 whileHover={{ 
                   scale: 1.05,
                   y: -2,
@@ -126,8 +126,9 @@ export function Hero() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </motion.div>
                 Solicitar demo
-              </motion.a>
+              </motion.button>
               <motion.button 
+                onClick={() => onOpenSalesForm?.('Descubrir SmartStay')}
                 whileHover={{ 
                   scale: 1.02,
                   backgroundColor: "rgba(37, 99, 235, 0.1)",

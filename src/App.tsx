@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import { Hero } from './components/Hero';
 import { Problems } from './components/Problems';
 import { Solution } from './components/Solution';
@@ -21,36 +21,47 @@ import { BrandHero } from './components/BrandHero';
 import { CookieBanner } from './components/CookieBanner';
 import { TermsModal } from './components/TermsModal';
 import { VideoShowcase } from './components/VideoShowcase';
+import { SupportPortal } from './components/SupportPortal';
+import { SalesFormModal } from './components/SalesFormModal';
 
 export default function App() {
   const [showTerms, setShowTerms] = useState(false);
+  const [salesFormOpen, setSalesFormOpen] = useState(false);
+  const [salesFormOrigen, setSalesFormOrigen] = useState('Web SmartStay');
+
+  const openSalesForm = useCallback((origen: string) => {
+    setSalesFormOrigen(origen);
+    setSalesFormOpen(true);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
       <ScrollProgress />
-      <Navigation />
+      <Navigation onOpenSalesForm={openSalesForm} />
       <FloatingElements />
       <BrandHero />
-      <Hero />
+      <Hero onOpenSalesForm={openSalesForm} />
       <Problems />
       <Solution />
       <VideoShowcase />
       <DigitalGuides />
       <LocalBusiness />
       {/* Servicios principales */}
-      <AccessControl />
+      <AccessControl onOpenSalesForm={openSalesForm} />
       {/* Servicios IoT y adicionales */}
       <IoTControl />
-      <ParkingAccess />
-      <StarlinkInstallation />
-      <WiFiNetwork />
-      <DomoticsControl />
-      <Benefits />
+      <ParkingAccess onOpenSalesForm={openSalesForm} />
+      <StarlinkInstallation onOpenSalesForm={openSalesForm} />
+      <WiFiNetwork onOpenSalesForm={openSalesForm} />
+      <DomoticsControl onOpenSalesForm={openSalesForm} />
+      <Benefits onOpenSalesForm={openSalesForm} />
       <Differentiation />
       <Innovation />
-      <FinalCTA onOpenTerms={() => setShowTerms(true)} />
+      <SupportPortal />
+      <FinalCTA onOpenTerms={() => setShowTerms(true)} onOpenSalesForm={openSalesForm} />
       <CookieBanner onOpenTerms={() => setShowTerms(true)} />
       <TermsModal isOpen={showTerms} onClose={() => setShowTerms(false)} />
+      <SalesFormModal isOpen={salesFormOpen} onClose={() => setSalesFormOpen(false)} origen={salesFormOrigen} />
     </div>
   );
 }

@@ -5,9 +5,10 @@ import { useRef } from 'react';
 
 interface FinalCTAProps {
   onOpenTerms?: () => void;
+  onOpenSalesForm?: (origen: string) => void;
 }
 
-export function FinalCTA({ onOpenTerms }: FinalCTAProps) {
+export function FinalCTA({ onOpenTerms, onOpenSalesForm }: FinalCTAProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -149,8 +150,8 @@ export function FinalCTA({ onOpenTerms }: FinalCTAProps) {
               transition={{ duration: 0.6, delay: 1.1 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <motion.a
-                href="mailto:sales@smartstaycloud.com"
+              <motion.button
+                onClick={() => onOpenSalesForm?.('Solicitar demo gratuita — CTA Final')}
                 whileHover={{ 
                   scale: 1.05,
                   y: -5,
@@ -163,7 +164,7 @@ export function FinalCTA({ onOpenTerms }: FinalCTAProps) {
                 <Calendar className="w-5 h-5" />
                 Solicitar demo gratuita
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.a>
+              </motion.button>
               <motion.a
                 href="mailto:info@smartstaycloud.com"
                 whileHover={{ 

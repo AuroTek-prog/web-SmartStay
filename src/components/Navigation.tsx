@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 
 const NAV_SECTIONS = ['solucion', 'funcionalidades', 'beneficios'] as const;
 
-export function Navigation() {
+export function Navigation({ onOpenSalesForm }: { onOpenSalesForm?: (origen: string) => void }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const { scrollY } = useScroll();
@@ -97,14 +97,14 @@ export function Navigation() {
             >
               Registrarse
             </motion.a>
-            <motion.a 
-              href="mailto:sales@smartstaycloud.com"
+            <motion.button 
+              onClick={() => onOpenSalesForm?.('Solicitar demo — Navegación')}
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               Solicitar demo
-            </motion.a>
+            </motion.button>
           </div>
 
           {/* Mobile menu button */}
@@ -135,9 +135,9 @@ export function Navigation() {
             <a href="https://smartstaycloud.com/" target="_blank" rel="noopener noreferrer" className="block text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Registrarse
             </a>
-            <a href="mailto:sales@smartstaycloud.com" className="block w-full text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
+            <button onClick={() => { setIsOpen(false); onOpenSalesForm?.('Solicitar demo — Navegación móvil'); }} className="block w-full text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all">
               Solicitar demo
-            </a>
+            </button>
           </div>
         )}
       </div>

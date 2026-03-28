@@ -137,7 +137,7 @@ const colorClasses = {
   }
 };
 
-export function Benefits() {
+export function Benefits({ onOpenSalesForm }: { onOpenSalesForm?: (origen: string) => void }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -276,12 +276,12 @@ export function Benefits() {
             Alta rápida, soporte en español y planes desde 4.99€/mes. Contacta con nuestro equipo y te preparamos una demo personalizada.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:sales@smartstaycloud.com"
+            <button
+              onClick={() => onOpenSalesForm?.('Solicitar demo gratuita — Beneficios')}
               className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:shadow-xl transition-all font-semibold text-lg"
             >
               Solicitar demo gratuita
-            </a>
+            </button>
             <a
               href="mailto:info@smartstaycloud.com"
               className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition-all font-semibold text-lg"
