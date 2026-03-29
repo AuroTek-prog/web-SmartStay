@@ -118,27 +118,30 @@ async function handleSalesRequest(request, env) {
 
 export default {
   async fetch(request, env) {
-    const url = new URL(request.url);
+    try {
+      const url = new URL(request.url);
 
-    if (url.pathname === '/api/sales-request') {
-      if (request.method === 'OPTIONS') {
-        return new Response(null, { status: 204, headers: corsHeaders });
-      }
-
-      if (request.method === 'POST') {
-        try {
-          return await handleSalesRequest(request, env);
-        } catch (err) {
-          return new Response(
-            JSON.stringify({ success: false, error: err.message || 'Error interno' }),
-            { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
-          );
+      if (url.pathname === '/api/sales-request') {
+        if (request.method === 'OPTIONS') {
+          return new Response(null, { status: 204, headers: corsHeaders });
         }
+
+        if (request.method === 'POST') {
+          return await handleSalesRequest(request, env);
+        }
+
+        return new Response(
+          JSON.stringify({ error: 'Method Not Allowed' }),
+          { status: 405, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
+        );
       }
 
-      return new Response('Method Not Allowed', { status: 405 });
+      return env.ASSETS.fetch(request);
+    } catch (err) {
+      return new Response(
+        JSON.stringify({ success: false, error: String(err), stack: err.stack || '' }),
+        { status: 500, headers: { 'Content-Type': 'application/json', ...corsHeaders } }
+      );
     }
-
-    return env.ASSETS.fetch(request);
   },
 };
